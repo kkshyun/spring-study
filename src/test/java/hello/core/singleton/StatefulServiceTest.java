@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-
-class StatefulServiceTest {
+public class StatefulServiceTest {
     @Test
     void statefulServiceSingleton() {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
