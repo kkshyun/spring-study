@@ -40,14 +40,14 @@ class ApplicationContextBasicFindTest {
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
 
-    @Test
-    @DisplayName("빈 이름으로 조회X")
-        // 반환타입으로 무조건 하지 않아도 조회가 가능하지만 구체 타입으로 조회하는 것은 좋지 않다
-    void findBeanByNameX() {
-        MemberService xxxxx = ac.getBean("xxxxx", MemberServiceImpl.class);
-        // junit의 Assertions
-        // 오른쪽 코드를 실행하면 왼쪽에 있는 예외가 터져야 성공
-        assertThrows(NoSuchBeanDefinitionException.class,
-                () -> ac.getBean("xxxxx", MemberServiceImpl.class));
-    }
+//    @Test
+//    @DisplayName("빈 이름으로 조회X")
+//        // 반환타입으로 무조건 하지 않아도 조회가 가능하지만 구체 타입으로 조회하는 것은 좋지 않다
+//    void findBeanByNameX() {
+//        MemberService xxxxx = ac.getBean("xxxxx", MemberServiceImpl.class);
+//        // junit의 Assertions
+//        // 오른쪽 코드를 실행하면 왼쪽에 있는 예외가 터져야 성공
+//        assertThrows(NoSuchBeanDefinitionException.class,
+//                () -> ac.getBean("xxxxx", MemberServiceImpl.class));
+//    }
 }

@@ -17,7 +17,7 @@ public class ComponentFilterAppConfigTest {
         BeanA beanA = ac.getBean("beanA", BeanA.class);
         Assertions.assertThat(beanA).isNotNull();
 
-        ac.getBean("beanB", BeanB.class);
+//        ac.getBean("beanB", BeanB.class);
         org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("beanB", BeanB.class));
 
